@@ -83,14 +83,6 @@ def update(entity):
     '''update the entities via this interface'''
     
     data = flask_post_json()
-    '''
-    #Check if existing entity
-    if entity in myWorld.world().keys():
-        myWorld.update(entity, data.keys()[0], data.values()[0])
-    #If not in existance set it
-    else:
-        myWorld.set(entity, data)
-    '''
     myWorld.set(entity, data)
     return json.dumps(data)
 
